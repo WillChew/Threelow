@@ -12,19 +12,35 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        
-        
         Dice *dice1 = [[Dice alloc]init];
         Dice *dice2 = [[Dice alloc]init];
         Dice *dice3 = [[Dice alloc]init];
         Dice *dice4 = [[Dice alloc]init];
         Dice *dice5 = [[Dice alloc]init];
-        
-        [dice1 randomizeValue];
-        [dice2 randomizeValue];
-        [dice3 randomizeValue];
-        [dice4 randomizeValue];
-        [dice5 randomizeValue];
+
+        while (YES) {
+            Dice *diceInGame = [[Dice alloc]init];
+            NSString *userInput = [diceInGame inputForRoll:@"Type roll to roll"];
+            
+            if ([userInput isEqualTo:@"roll"]) {
+                
+               NSInteger *dice1Value = [dice1 randomizeValue];
+                
+            }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        }
     }
     return 0;
 }

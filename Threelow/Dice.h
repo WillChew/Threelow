@@ -14,5 +14,9 @@
 
 - (NSInteger)randomizeValue;
 
+- (NSString *)inputForRoll:(NSString*)roll;
+
+
+
 
 @end

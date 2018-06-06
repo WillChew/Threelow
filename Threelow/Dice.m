@@ -11,6 +11,7 @@
 @implementation Dice
 
 - (instancetype)init
+
 {
     NSInteger random = 0;
     self = [super init];
@@ -23,8 +24,21 @@
 
 - (NSInteger)randomizeValue {
     self.currentValue = arc4random_uniform(6)+1;
-    NSLog(@"%ld", (long)self.currentValue);
+    NSLog(@"%ld", self.currentValue);
     return self.currentValue;
+}
+
+- (NSString *)inputForRoll:(NSString *)roll {
+    char userRolls[255];
+    NSLog(@"%@", roll);
+    fgets(userRolls, 255, stdin);
+    
+    NSString *rollString = [NSString stringWithCString:userRolls encoding:NSUTF8StringEncoding];
+    NSString *rollTrimmed = [rollString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    return rollTrimmed;
+
+    
 }
 
 
